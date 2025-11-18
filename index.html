@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Daily Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#007AFF">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#007AFF">
+    <meta name="apple-mobile-web-app-title" content="Daily Tracker">
+    <link rel="apple-touch-icon" href="icon-192x192.jpg">
+    <link rel="icon" type="image/jpg" sizes="32x32" href="icon-32x32.jpg">
+    <link rel="icon" type="image/jpg" sizes="16x16" href="icon-16x16.jpg">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <h1><i class="fas fa-chart-line"></i> Daily Tracker</h1>
+            <p>Track your daily activities and progress</p>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <div class="nav-tabs">
+                <button class="nav-tab active" data-tab="career">Career Development</button>
+                <button class="nav-tab" data-tab="language">Foreign Language</button>
+                <button class="nav-tab" data-tab="personal">Personal Development</button>
+                <button class="nav-tab" data-tab="scientific">Scientific Development</button>
+                <button class="nav-tab" data-tab="physical">Physical Development</button>
+                <button class="nav-tab" data-tab="habits">Habits</button>
+                <button class="nav-tab" data-tab="general">General</button>
+            </div>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <div class="desktop-nav">
+            <div class="nav-tabs">
+                <button class="nav-tab active" data-tab="career">Career Development</button>
+                <button class="nav-tab" data-tab="language">Foreign Language</button>
+                <button class="nav-tab" data-tab="personal">Personal Development</button>
+                <button class="nav-tab" data-tab="scientific">Scientific Development</button>
+                <button class="nav-tab" data-tab="physical">Physical Development</button>
+                <button class="nav-tab" data-tab="habits">Habits</button>
+                <button class="nav-tab" data-tab="general">General</button>
+            </div>
+        </div>
+
+        <!-- Career Development Section -->
+        <div id="career" class="content-section active">
+            <div class="activity-card">
+                <div class="activity-header">
+                    <h3 class="activity-title"><i class="fas fa-table"></i> Excel</h3>
+                </div>
+                <p class="activity-plan">Goal: Learn 5 new things daily</p>
+                <div class="input-group">
+                    <input type="number" placeholder="Enter today's count" class="activity-input" data-activity="excel">
+                    <button class="calendar-btn"><i class="fas fa-calendar"></i></button>
+                </div>
+                <div class="history-section">
+                    <h4 class="history-title">History</h4>
+                    <div class="history-list" id="excel-history"></div>
+                </div>
+            </div>
+
+            <div class="activity-card">
+                <div class="activity-header">
+                    <h3 class="activity-title"><i class="fas fa-truck"></i> Logistics</h3>
+                </div>
+                <p class="activity-plan">Goal: Learn 2 new things daily</p>
+                <div class="input-group">
+                    <input type="number" placeholder="Enter today's count" class="activity-input" data-activity="logistics">
+                    <button class="calendar-btn"><i class="fas fa-calendar"></i></button>
+                </div>
+                <div class="history-section">
+                    <h4 class="history-title">History</h4>
+                    <div class="history-list" id="logistics-history"></div>
+                </div>
+            </div>
+
+            <div class="activity-card">
+                <div class="activity-header">
+                    <h3 class="activity-title"><i class="fas fa-chess"></i> Chess</h3>
+                </div>
+                <p class="activity-plan">Goal: Complete 2 full games daily</p>
+                <div class="input-group">
+                    <input type="number" placeholder="Enter today's count" class="activity-input" data-activity="chess">
+                    <button class="calendar-btn"><i class="fas fa-calendar"></i></button>
+                </div>
+                <div class="history-section">
+                    <h4 class="history-title">History</h4>
+                    <div class="history-list" id="chess-history"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Foreign Language Section -->
+        <div id="language" class="content-section">
+            <div class="activity-card">
+                <div class="activity-header">
+                    <h3 class="activity-title"><i class="fas fa-podcast"></i> Podcast</h3>
+                </div>
+                <p class="activity-plan">Goal: Listen to 2 podcasts daily</p>
+                <div class="input-group">
+                    <input type="number" placeholder="Enter today's count" class="activity-input" data-activity="podcast">
+                    <button class="calendar-btn"><i class="fas fa-calendar"></i></button>
+                </div>
+                <div class="history-section">
+                    <h4 class="history-title">History</h4>
+                    <div class="history-list" id="podcast-history"></div>
+                </div>
+            </div>
+
+            <div class="activity-card">
+                <div class="activity-header">
+                    <h3 class="activity-title"><i class="fas fa-graduation-cap"></i> Ibrat Academy</h3>
+                </div>
+                <p class="activity-plan">Goal: Complete 1 quiz daily</p>
+                <div class="input-group">
+                    <input type="number" placeholder="Enter today's count" class="activity-input" data-activity="ibrat">
+                    <button class="calendar-btn"><i class="fas fa-calendar"></i></button>
+                </div>
+                <div class="history-section">
+                    <h4 class="history-title">History</h4>
+                    <div class="history-list" id="ibrat-history"></div>
+                </div>
+            </div>
+
+            <div class="activity-card">
+                <div class="activity-header">
+                    <h3 class="activity-title"><i class="fas fa-book-open"></i> Vocabulary</h3>
+                </div>
+                <p class="activity-plan">Goal: Learn 3 new words daily</p>
+                <div class="input-group">
+                    <input type="number" placeholder="Enter today's count" class="activity-input" data-activity="vocabulary">
+                    <button class="calendar-btn"><i class="fas fa-calendar"></i></button>
+                </div>
+                <div class="history-section">
+                    <h4 class="history-title">History</h4>
+                    <div class="history-list" id="vocabulary-history"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Personal Development Section -->
+        <div id="personal" class="content-section">
+            <div class="activity-card">
+                <div class="activity-header">
+                    <h3 class="activity-title"><i class="fas fa-book"></i> Book</h3>
+                </div>
+                <p class="activity-plan">Goal: Read for 60 minutes daily</p>
+                <div class="input-group">
+                    <input type="number" placeholder="Enter minutes read" class="activity-input" data-activity="book">
+                    <button class="calendar-btn"><i class="fas fa-calendar"></i></button>
+                </div>
+                <div class="history-section">
+                    <h4 class="history-title">History</h4>
+                    <div class="history-list" id="book-history"></div>
+                </div>
+            </div>
+
+            <div class="activity-card">
+                <div class="activity-header">
+                    <h3 class="activity-title"><i class="fas fa-spa"></i> Meditation</h3>
+                </div>
+                <p class="activity-plan">Goal: Meditate for 20 minutes daily</p>
+                <div class="input-group">
+                    <input type="number" placeholder="Enter minutes meditated" class="activity-input" data-activity="meditation">
+                    <button class="calendar-btn"><i class="fas fa-calendar"></i></button>
+                </div>
+                <div class="history-section">
+                    <h4 class="history-title">History</h4>
+                    <div class="history-list" id="meditation-history"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scientific Development Section -->
+        <div id="scientific" class="content-section">
+            <div class="activity-card">
+                <div class="activity-header">
+                    <h3 class="activity-title"><i class="fas fa-file-alt"></i> Dissertation</h3>
+                </div>
+                <p class="activity-plan">Goal: Write 1 page daily</p>
+                <div class="input-group">
+                    <input type="number" placeholder="Enter pages written" class="activity-input" data-activity="dissertation">
+                    <button class="calendar-btn"><i class="fas fa-calendar"></i></button>
+                </div>
+                <div class="history-section">
+                    <h4 class="history-title">History</h4>
+                    <div class="history-list" id="dissertation-history"></div>
+                </div>
+            </div>
+
+            <div class="activity-card">
+                <div class="activity-header">
+                    <h3 class="activity-title"><i class="fas fa-gavel"></i> Court Case</h3>
+                </div>
+                <p class="activity-plan">Goal: Study 1 court case daily</p>
+                <div class="input-group">
+                    <input type="number" placeholder="Enter cases studied" class="activity-input" data-activity="court">
+                    <button class="calendar-btn"><i class="fas fa-calendar"></i></button>
+                </div>
+                <div class="history-section">
+                    <h4 class="history-title">History</h4>
+                    <div class="history-list" id="court-history"></div>
+                </div>
+            </div>
+
+            <div class="activity-card">
+                <div class="activity-header">
+                    <h3 class="activity-title"><i class="fas fa-flask"></i> Substance</h3>
+                </div>
+                <p class="activity-plan">Goal: Learn 3 substances daily</p>
+                <div class="input-group">
+                    <input type="number" placeholder="Enter substances learned" class="activity-input" data-activity="substance">
+                    <button class="calendar-btn"><i class="fas fa-calendar"></i></button>
+                </div>
+                <div class="history-section">
+                    <h4 class="history-title">History</h4>
+                    <div class="history-list" id="substance-history"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Physical Development Section -->
+        <div id="physical" class="content-section">
+            <div class="activity-card">
+                <div class="activity-header">
+                    <h3 class="activity-title"><i class="fas fa-dumbbell"></i> Squats</h3>
+                </div>
+                <p class="activity-plan">Goal: Complete 50 squats daily</p>
+                <div class="input-group">
+                    <input type="number" placeholder="Enter number of squats" class="activity-input" data-activity="squats">
+                    <button class="calendar-btn"><i class="fas fa-calendar"></i></button>
+                </div>
+                <div class="history-section">
+                    <h4 class="history-title">History</h4>
+                    <div class="history-list" id="squats-history"></div>
+                </div>
+            </div>
+
+            <div class="activity-card">
+                <div class="activity-header">
+                    <h3 class="activity-title"><i class="fas fa-running"></i> Push-ups</h3>
+                </div>
+                <p class="activity-plan">Goal: Complete 100 push-ups daily</p>
+                <div class="input-group">
+                    <input type="number" placeholder="Enter number of push-ups" class="activity-input" data-activity="pushups">
+                    <button class="calendar-btn"><i class="fas fa-calendar"></i></button>
+                </div>
+                <div class="history-section">
+                    <h4 class="history-title">History</h4>
+                    <div class="history-list" id="pushups-history"></div>
+                </div>
+            </div>
+
+            <div class="activity-card">
+                <div class="activity-header">
+                    <h3 class="activity-title"><i class="fas fa-stopwatch"></i> Plank</h3>
+                </div>
+                <p class="activity-plan">Goal: Hold plank for 2 minutes daily</p>
+                <div class="input-group">
+                    <input type="number" placeholder="Enter minutes held" class="activity-input" data-activity="plank">
+                    <button class="calendar-btn"><i class="fas fa-calendar"></i></button>
+                </div>
+                <div class="history-section">
+                    <h4 class="history-title">History</h4>
+                    <div class="history-list" id="plank-history"></div>
+                </div>
+            </div>
+
+            <div class="activity-card">
+                <div class="activity-header">
+                    <h3 class="activity-title"><i class="fas fa-person-running"></i> Mountain Climbers</h3>
+                </div>
+                <p class="activity-plan">Goal: Complete 2 minutes daily</p>
+                <div class="input-group">
+                    <input type="number" placeholder="Enter minutes completed" class="activity-input" data-activity="mountain">
+                    <button class="calendar-btn"><i class="fas fa-calendar"></i></button>
+                </div>
+                <div class="history-section">
+                    <h4 class="history-title">History</h4>
+                    <div class="history-list" id="mountain-history"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Habits Section -->
+        <div id="habits" class="content-section">
+            <div class="activity-card">
+                <div class="activity-header">
+                    <h3 class="activity-title"><i class="fas fa-sun"></i> Wake Up Time</h3>
+                </div>
+                <p class="activity-plan">Goal: Wake up at 6:00 AM daily</p>
+                <div class="input-group">
+                    <input type="time" class="activity-input" data-activity="wakeup">
+                    <button class="calendar-btn"><i class="fas fa-calendar"></i></button>
+                </div>
+                <div class="history-section">
+                    <h4 class="history-title">History</h4>
+                    <div class="history-list" id="wakeup-history"></div>
+                </div>
+            </div>
+
+            <div class="activity-card">
+                <div class="activity-header">
+                    <h3 class="activity-title"><i class="fas fa-bed"></i> Make Bed</h3>
+                </div>
+                <p class="activity-plan">Goal: Make your bed daily</p>
+                <div class="input-group">
+                    <select class="activity-input" data-activity="makebed">
+                        <option value="">Select</option>
+                        <option value="completed">Completed</option>
+                        <option value="not_completed">Not Completed</option>
+                    </select>
+                    <button class="calendar-btn"><i class="fas fa-calendar"></i></button>
+                </div>
+                <div class="history-section">
+                    <h4 class="history-title">History</h4>
+                    <div class="history-list" id="makebed-history"></div>
+                </div>
+            </div>
+
+            <div class="activity-card">
+                <div class="activity-header">
+                    <h3 class="activity-title"><i class="fas fa-mobile-alt"></i> Without Phone</h3>
+                </div>
+                <p class="activity-plan">Goal: Avoid phone/TV 30 minutes before sleep</p>
+                <div class="input-group">
+                    <select class="activity-input" data-activity="withoutphone">
+                        <option value="">Select</option>
+                        <option value="completed">Completed</option>
+                        <option value="not_completed">Not Completed</option>
+                    </select>
+                    <button class="calendar-btn"><i class="fas fa-calendar"></i></button>
+                </div>
+                <div class="history-section">
+                    <h4 class="history-title">History</h4>
+                    <div class="history-list" id="withoutphone-history"></div>
+                </div>
+            </div>
+
+            <div class="activity-card">
+                <div class="activity-header">
+                    <h3 class="activity-title"><i class="fas fa-moon"></i> Sleep Time</h3>
+                </div>
+                <p class="activity-plan">Goal: Sleep at 11:00 PM daily</p>
+                <div class="input-group">
+                    <input type="time" class="activity-input" data-activity="sleeptime">
+                    <button class="calendar-btn"><i class="fas fa-calendar"></i></button>
+                </div>
+                <div class="history-section">
+                    <h4 class="history-title">History</h4>
+                    <div class="history-list" id="sleeptime-history"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- General Section -->
+        <div id="general" class="content-section">
+            <div class="controls">
+                <button class="btn btn-primary" id="reset-btn"><i class="fas fa-redo"></i> Reset All Data</button>
+                <button class="btn btn-success" id="export-btn"><i class="fas fa-file-excel"></i> Export to Excel</button>
+            </div>
+            <div class="general-history" id="general-history">
+                <!-- General history will be populated here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Calendar Modal -->
+    <div id="calendar-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Select Date</h3>
+            <input type="date" id="date-picker" max="">
+        </div>
+    </div>
+
+    <!-- PWA Install Prompt -->
+    <div id="install-prompt" class="install-prompt">
+        <div class="install-content">
+            <div class="install-icon">
+                <i class="fas fa-download"></i>
+            </div>
+            <div class="install-text">
+                <h3>Add to Home Screen</h3>
+                <p>Install Daily Tracker for offline use and better experience</p>
+            </div>
+            <button id="install-btn" class="btn btn-primary">Install</button>
+            <button id="install-dismiss" class="btn btn-secondary">Dismiss</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
